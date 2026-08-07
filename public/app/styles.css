@@ -20,3 +20,17 @@
 /* Mascota interactiva */
 .mascot-button{position:relative;display:block;width:100%;padding:0;border:0;background:transparent;cursor:pointer;transform-origin:50% 100%;filter:none}.mascot-button .mascot{display:block}.mascot-button:hover .mascot{filter:drop-shadow(0 20px 20px #44307f38);transform:translateY(-4px)}.mascot-button:active{transform:scale(.96)}.mascot-effects{position:absolute;inset:4% -8% auto;z-index:2;height:65%;pointer-events:none}.mascot-effects i{position:absolute;opacity:0;color:#ff6b91;font:800 1.8rem "Baloo 2";text-shadow:0 2px white}.mascot-effects i:nth-child(1){left:2%;top:35%;color:#6b5be7}.mascot-effects i:nth-child(2){right:0;top:8%;color:#f2b928}.mascot-effects i:nth-child(3){right:7%;top:55%;color:#38bfa5}.mascot-button.is-dancing{animation:mascotDance 1.35s ease-in-out}.mascot-button.is-dancing .mascot{animation:mascotBounce .45s ease-in-out 3}.mascot-button.is-dancing .mascot-effects i{animation:effectPop 1.2s ease-out}.mascot-button.is-dancing .mascot-effects i:nth-child(2){animation-delay:.12s}.mascot-button.is-dancing .mascot-effects i:nth-child(3){animation-delay:.24s}@keyframes mascotDance{0%,100%{transform:rotate(0)}15%{transform:rotate(-7deg) translateY(-5px)}32%{transform:rotate(7deg) translateY(0)}50%{transform:rotate(-6deg) translateY(-9px)}68%{transform:rotate(6deg)}84%{transform:rotate(-3deg) translateY(-4px)}}@keyframes mascotBounce{50%{transform:translateY(-12px) scale(1.03)}}@keyframes effectPop{0%{opacity:0;transform:translateY(20px) scale(.5) rotate(-15deg)}25%{opacity:1}100%{opacity:0;transform:translateY(-35px) scale(1.25) rotate(12deg)}}
 @media(max-width:560px){.mascot-button{position:sticky;top:8px;width:92px}.mascot-button .mascot{position:static;width:100%}}@media(max-width:380px){.mascot-button{width:72px}}@media(prefers-reduced-motion:reduce){.mascot-button.is-dancing{animation:none}.mascot-button.is-dancing .mascot{animation:none}}
+
+/* Portada móvil equilibrada: actividades arriba y mascota debajo */
+@media(max-width:560px){
+ .home{display:flex;flex-direction:column;align-items:center;width:100%;gap:18px;margin-top:12px}
+ .home .menu{order:1;width:min(100%,430px);grid-template-columns:repeat(2,minmax(0,1fr));margin:0 auto;justify-content:center}
+ .home .mascot-button{order:2;position:relative;top:auto;width:165px;margin:0 auto -8px;align-self:center}
+ .home .mascot-button .mascot{position:static;width:100%;max-height:245px;object-fit:contain}
+ .menu-card,.menu-card--songs,.menu-card--stories{width:100%;min-height:112px;text-align:center}
+ .menu-card span{text-align:center}
+}
+@media(max-width:380px){
+ .home .mascot-button{width:145px}
+ .home .mascot-button .mascot{max-height:218px}
+}
