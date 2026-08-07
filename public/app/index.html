@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7357e8">
+  <meta name="description" content="Juegos educativos para aprender animales, colores, formas y números.">
+  <title>Hola Peque · Aprende jugando</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <img class="logo" src="img/interfaz/logo_hola_peque.png" alt="Hola Peque">
+      <p class="hero__eyebrow">Aprender es una aventura</p>
+      <h1>¿Qué quieres descubrir hoy?</h1>
+      <p class="hero__subtitle">Toca una tarjeta y aprende jugando</p>
+    </header>
+
+    <section class="home" aria-label="Actividades">
+      <button id="mascot-button" class="mascot-button" type="button" aria-label="Toca a la niña para bailar">
+        <span class="mascot-effects" aria-hidden="true"><i>♪</i><i>★</i><i>♫</i></span>
+        <img class="mascot" src="img/personajes/niña.png" alt="Nuestra amiga te da la bienvenida">
+      </button>
+      <nav class="menu" aria-label="Menú principal">
+        <button class="menu-card menu-card--animals" data-section="animales">
+          <img src="img/interfaz/btn_animales.png" alt="">
+          <span>Animales</span><small>Conoce nuevos amigos</small>
+        </button>
+        <button class="menu-card menu-card--colors" data-section="colores">
+          <img src="img/interfaz/btn_colores.png" alt="">
+          <span>Colores</span><small>Un mundo de color</small>
+        </button>
+        <button class="menu-card menu-card--shapes" data-section="formas">
+          <img src="img/interfaz/btn_formas.png" alt="">
+          <span>Formas</span><small>Descubre sus figuras</small>
+        </button>
+        <button class="menu-card menu-card--numbers" data-section="numeros">
+          <img src="img/interfaz/btn_numeros.png" alt="">
+          <span>Números</span><small>Cuenta del cero al nueve</small>
+        </button>
+        <button class="menu-card menu-card--songs" data-section="canciones">
+          <img src="img/interfaz/btn_canciones.png" alt="">
+          <span>Canciones</span><small>Canta y baila</small>
+        </button>
+        <button class="menu-card menu-card--stories" data-section="cuentos">
+          <img src="img/interfaz/btn_cuentos.png" alt="">
+          <span>Cuentos</span><small>Historias para imaginar</small>
+        </button>      </nav>
+    </section>
+  </main>
+
+  <section id="pantalla-animales" class="screen" role="dialog" aria-modal="true" aria-labelledby="nombre-animal" hidden>
+    <div class="activity-card">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Animales</span>
+      <h2 id="nombre-animal"></h2>
+      <div class="visual-stage"><img id="animal-grande" class="animal" src="" alt=""></div>
+      <div class="actions"><button class="listen" data-audio="animales">🔊 Escuchar</button><button class="next" data-next="animal">Siguiente →</button></div>
+    </div>
+  </section>
+
+  <section id="pantalla-colores" class="screen" role="dialog" aria-modal="true" aria-labelledby="nombre-color" hidden>
+    <div class="activity-card">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Colores</span>
+      <h2 id="nombre-color"></h2>
+      <div class="visual-stage"><div id="color-grande" class="color-swatch"></div></div>
+      <div class="actions"><button class="listen" data-audio="colores">🔊 Escuchar</button><button class="next" data-next="color">Siguiente →</button></div>
+    </div>
+  </section>
+
+  <section id="pantalla-formas" class="screen" role="dialog" aria-modal="true" aria-labelledby="nombre-forma" hidden>
+    <div class="activity-card">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Formas</span>
+      <h2 id="nombre-forma"></h2>
+      <div id="forma-grande" class="visual-stage"></div>
+      <div class="actions"><button class="listen" data-audio="formas">🔊 Escuchar</button><button class="next" data-next="forma">Siguiente →</button></div>
+    </div>
+  </section>
+
+  <section id="pantalla-numeros" class="screen" role="dialog" aria-modal="true" aria-labelledby="nombre-numero" hidden>
+    <div class="activity-card">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Números</span>
+      <h2 id="nombre-numero"></h2>
+      <div class="visual-stage"><div id="numero-grande" class="number"></div></div>
+      <div class="actions"><button class="listen" data-audio="numeros">🔊 Escuchar</button><button class="next" data-next="numero">Siguiente →</button></div>
+    </div>
+  </section>
+
+  <section id="pantalla-canciones" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-canciones" hidden>
+    <div class="activity-card activity-card--wide">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Música</span>
+      <h2 id="titulo-canciones">Canciones favoritas</h2>
+      <div id="lista-canciones" class="song-list"></div>
+    </div>
+  </section>
+
+  <section id="reproductor-video" class="screen" role="dialog" aria-modal="true" aria-label="Reproductor de vídeo" hidden>
+    <div class="video-card">
+      <button id="cerrar-video" class="back" aria-label="Volver a las canciones">←</button>
+      <video id="video-player" controls playsinline></video>
+    </div>
+  </section>
+
+  <section id="pantalla-cuentos" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-cuentos" hidden>
+    <div class="activity-card activity-card--wide">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Biblioteca</span>
+      <h2 id="titulo-cuentos">Cuentos para soñar</h2>
+      <p class="stories-intro">Elige una historia y deja volar tu imaginación.</p>
+      <div id="lista-cuentos" class="story-list"></div>
+    </div>
+  </section>
+  <section id="lector-cuento" class="screen" role="dialog" aria-modal="true" aria-labelledby="cuento-titulo" hidden>
+    <article class="story-reader">
+      <button id="cerrar-cuento" class="back" aria-label="Volver a los cuentos">←</button>
+      <div id="cuento-ilustracion" class="story-illustration" aria-hidden="true"></div>
+      <span id="cuento-progreso" class="activity-tag"></span>
+      <h2 id="cuento-titulo"></h2>
+      <p id="cuento-texto" class="story-text"></p>
+      <div class="story-actions">
+        <button id="cuento-anterior" class="listen" aria-label="Página anterior">⬅️ <span>Anterior</span></button>
+        <button id="leer-cuento" class="read-aloud" aria-label="Escuchar otra vez">🔊 <span>Escuchar</span></button>
+        <button id="cuento-siguiente" class="next" aria-label="Página siguiente">➡️ <span>Siguiente</span></button>
+      </div>
+    </article>
+  </section>
+  <div id="audio-status" class="sr-only" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
