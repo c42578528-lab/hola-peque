@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#7357e8">
-  <meta name="description" content="Juegos educativos para aprender animales, colores, formas y números.">
+  <meta name="description" content="Juegos educativos para aprender animales, colores, formas, números y vocales.">
   <title>Hola Peque · Aprende jugando</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -39,7 +39,10 @@
           <img src="img/interfaz/btn_numeros.png" alt="">
           <span>Números</span><small>Cuenta del cero al nueve</small>
         </button>
-        <button class="menu-card menu-card--songs" data-section="canciones">
+        <button class="menu-card menu-card--vowels" data-section="vocales">
+          <span class="vowels-card-art" aria-hidden="true"><i>A</i><i>E</i><i>I</i><i>O</i><i>U</i></span>
+          <span>Vocales</span><small>Escucha y descubre sus sonidos</small>
+        </button>        <button class="menu-card menu-card--songs" data-section="canciones">
           <img src="img/interfaz/btn_canciones.png" alt="">
           <span>Canciones</span><small>Canta y baila</small>
         </button>
@@ -90,6 +93,18 @@
     </div>
   </section>
 
+  <section id="pantalla-vocales" class="screen" role="dialog" aria-modal="true" aria-labelledby="nombre-vocal" hidden>
+    <div class="activity-card">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Vocales</span>
+      <h2 id="nombre-vocal"></h2>
+      <div class="visual-stage vowel-stage">
+        <div id="vocal-grande" class="vowel"></div>
+        <div id="vocal-ejemplo" class="vowel-example" aria-hidden="true"></div>
+      </div>
+      <div class="actions"><button class="listen" data-audio="vocales">🔊 Escuchar</button><button class="next" data-next="vocal">Siguiente →</button></div>
+    </div>
+  </section>
   <section id="pantalla-canciones" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-canciones" hidden>
     <div class="activity-card activity-card--wide">
       <button class="back" aria-label="Volver al inicio">←</button>
@@ -133,6 +148,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
