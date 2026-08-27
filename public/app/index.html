@@ -49,7 +49,12 @@
         <button class="menu-card menu-card--stories" data-section="cuentos">
           <img src="img/interfaz/btn_cuentos.png" alt="">
           <span>Cuentos</span><small>Historias para imaginar</small>
-        </button>      </nav>
+        </button>
+        <button class="menu-card menu-card--find" data-section="juego">
+          <span class="find-card-art" aria-hidden="true"><i>?</i><b>★</b><b>●</b></span>
+          <span>¿Dónde está?</span><small>Escucha, busca y toca</small>
+        </button>
+      </nav>
     </section>
   </main>
 
@@ -105,6 +110,18 @@
       <div class="actions"><button class="listen" data-audio="vocales">🔊 Escuchar</button><button class="next" data-next="vocal">Siguiente →</button></div>
     </div>
   </section>
+  <section id="pantalla-juego" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-juego" hidden>
+    <div class="activity-card activity-card--game">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Juego</span>
+      <h2 id="titulo-juego">¿Dónde está?</h2>
+      <div id="find-progress" class="find-progress" aria-label="Progreso del juego"></div>
+      <button id="repeat-find" class="find-prompt" aria-label="Escuchar la pregunta"><span aria-hidden="true">🔊</span><small>Escuchar</small></button>
+      <div id="find-options" class="find-options"></div>
+      <div id="find-feedback" class="find-feedback" aria-live="polite"></div>
+    </div>
+  </section>
+
   <section id="pantalla-canciones" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-canciones" hidden>
     <div class="activity-card activity-card--wide">
       <button class="back" aria-label="Volver al inicio">←</button>
