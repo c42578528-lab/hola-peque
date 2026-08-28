@@ -36,7 +36,7 @@ function changeOutfit(name,speak=true){selectedOutfit=name;try{localStorage.setI
 document.querySelectorAll("[data-outfit]").forEach(button=>button.onclick=()=>changeOutfit(button.dataset.outfit));
 document.querySelector("#wardrobe-dance").onclick=()=>{const avatar=document.querySelector("#wardrobe-avatar");avatar.classList.remove("is-dancing");void avatar.offsetWidth;avatar.classList.add("is-dancing");playVoiceFile("sonidos/voz/mascota/0.mp3?v=2")};
 showChosenOutfit(selectedOutfit);
-const coloringPages=["leon","mariposa","cohete"],coloringColors=[["Rojo","#ef5350"],["Azul","#42a5f5"],["Amarillo","#ffd43b"],["Verde","#55c878"],["Rosa","#f58ac3"],["Morado","#9b72e8"],["Naranja","#ff914d"],["Marrón","#9a6746"]];
+const coloringPages=["leon","mariposa","cohete","perro","leon-amigo","cocodrilo","gato"],coloringColors=[["Rojo","#ef5350"],["Azul","#42a5f5"],["Amarillo","#ffd43b"],["Verde","#55c878"],["Rosa","#f58ac3"],["Morado","#9b72e8"],["Naranja","#ff914d"],["Marrón","#9a6746"]];
 let coloringPage=0,coloringColor=[255,212,59,255],coloringOriginal=null,coloringReady=false;
 const coloringCanvas=document.querySelector("#coloring-canvas"),coloringCtx=coloringCanvas.getContext("2d",{willReadFrequently:true});
 function sayColor(name){if(!window.speechSynthesis)return;window.speechSynthesis.cancel();const u=softenVoice(new SpeechSynthesisUtterance(name),"mascot");window.speechSynthesis.speak(u)}
