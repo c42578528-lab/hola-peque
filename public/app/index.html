@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#7357e8">
   <meta name="description" content="Juegos educativos para aprender animales, colores, formas, números y vocales.">
   <title>Hola Peque · Aprende jugando</title>
-  <link rel="stylesheet" href="styles.css?v=20260828-5">
+  <link rel="stylesheet" href="styles.css?v=20260828-6">
 </head>
 <body>
   <main class="app-shell">
@@ -57,6 +57,10 @@
         <button class="menu-card menu-card--dress" data-section="armario">
           <img class="card-illustration card-illustration--dress" src="img/personajes/armario/arcoiris.png" alt="">
           <span>Mi armario</span><small>¡Elige un look!</small>
+        </button>
+        <button class="menu-card menu-card--coloring" data-section="colorear">
+          <img class="card-illustration" src="img/colorear/leon.png" alt="">
+          <span>Colorear</span><small>Pinta con tus colores</small>
         </button>
       </nav>
     </section>
@@ -193,8 +197,26 @@
       </div>
     </article>
   </section>
+  <section id="pantalla-colorear" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-colorear" hidden>
+    <div class="activity-card activity-card--coloring">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Pinta y crea</span>
+      <h2 id="titulo-colorear">¡A colorear!</h2>
+      <div class="coloring-layout">
+        <div class="coloring-board"><canvas id="coloring-canvas" width="768" height="768" aria-label="Dibujo para colorear"></canvas></div>
+        <div class="coloring-tools">
+          <div id="coloring-palette" class="coloring-palette" aria-label="Elige un color"></div>
+          <div class="coloring-actions">
+            <button id="coloring-eraser" aria-label="Usar goma">🧽</button><button id="coloring-reset" aria-label="Empezar de nuevo">↻</button>
+            <button id="coloring-next" aria-label="Cambiar de dibujo">🖼️</button><button id="coloring-save" aria-label="Guardar dibujo">⬇️</button>
+          </div>
+        </div>
+      </div>
+      <p id="coloring-feedback" class="coloring-feedback" aria-live="polite">Toca un color y después el dibujo</p>
+    </div>
+  </section>
   <div id="audio-status" class="sr-only" aria-live="polite"></div>
-  <script src="script.js?v=20260828-5"></script>
+  <script src="script.js?v=20260828-6"></script>
 </body>
 </html>
 
