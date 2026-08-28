@@ -54,6 +54,10 @@
           <img class="card-illustration" src="img/interfaz/tarjetas/juego.png" alt="">
           <span>¿Dónde está?</span><small>Escucha, busca y toca</small>
         </button>
+        <button class="menu-card menu-card--dress" data-section="armario">
+          <img class="card-illustration card-illustration--dress" src="img/personajes/armario/arcoiris.png" alt="">
+          <span>Mi armario</span><small>Elige un conjunto</small>
+        </button>
       </nav>
     </section>
   </main>
@@ -119,6 +123,26 @@
       <button id="repeat-find" class="find-prompt" aria-label="Escuchar la pregunta"><span aria-hidden="true">🔊</span><small>Escuchar</small></button>
       <div id="find-options" class="find-options"></div>
       <div id="find-feedback" class="find-feedback" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="pantalla-armario" class="screen" role="dialog" aria-modal="true" aria-labelledby="titulo-armario" hidden>
+    <div class="activity-card activity-card--wardrobe">
+      <button class="back" aria-label="Volver al inicio">←</button>
+      <span class="activity-tag">Viste a tu amiga</span>
+      <h2 id="titulo-armario">Mi armario</h2>
+      <div class="wardrobe-playground">
+        <span class="wardrobe-sparkles" aria-hidden="true">★ ✦ ♥</span>
+        <img id="wardrobe-avatar" src="img/personajes/armario/flores.png" alt="La niña lleva un vestido de flores">
+      </div>
+      <div class="outfit-list" aria-label="Elige la ropa">
+        <button class="outfit-option is-selected" data-outfit="flores" aria-label="Vestido de flores"><img src="img/personajes/armario/flores.png" alt=""><span>🌸</span></button>
+        <button class="outfit-option" data-outfit="jardinera" aria-label="Jardinera"><img src="img/personajes/armario/jardinera.png" alt=""><span>🌈</span></button>
+        <button class="outfit-option" data-outfit="lluvia" aria-label="Ropa de lluvia"><img src="img/personajes/armario/lluvia.png" alt=""><span>🌧️</span></button>
+        <button class="outfit-option" data-outfit="pijama" aria-label="Pijama de estrellas"><img src="img/personajes/armario/pijama.png" alt=""><span>🌙</span></button>
+        <button class="outfit-option" data-outfit="arcoiris" aria-label="Vestido arcoíris"><img src="img/personajes/armario/arcoiris.png" alt=""><span>⭐</span></button>
+      </div>
+      <button id="wardrobe-dance" class="wardrobe-dance" aria-label="Haz bailar a la niña">🎵 <span>¡A bailar!</span></button>
     </div>
   </section>
 
