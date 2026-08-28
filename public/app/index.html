@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#7357e8">
   <meta name="description" content="Juegos educativos para aprender animales, colores, formas, números y vocales.">
   <title>Hola Peque · Aprende jugando</title>
-  <link rel="stylesheet" href="styles.css?v=20260828-11">
+  <link rel="stylesheet" href="styles.css?v=20260828-12">
 </head>
 <body>
   <main class="app-shell">
@@ -20,46 +20,46 @@
     <section class="home" aria-label="Actividades">
       <button id="mascot-button" class="mascot-button" type="button" aria-label="Toca a la niña para bailar">
         <span class="mascot-effects" aria-hidden="true"><i>♪</i><i>★</i><i>♫</i></span>
-        <img class="mascot" src="img/personajes/niña.png" alt="Nuestra amiga te da la bienvenida">
+        <img class="mascot" src="img/personajes/niña-home.webp" alt="Nuestra amiga te da la bienvenida" fetchpriority="high" decoding="async">
       </button>
       <nav class="menu" aria-label="Menú principal">
         <button class="menu-card menu-card--animals" data-section="animales">
-          <img class="card-illustration" src="img/interfaz/tarjetas/animales.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/animales.webp" alt="" decoding="async">
           <span>Animales</span><small>Conoce nuevos amigos</small>
         </button>
         <button class="menu-card menu-card--colors" data-section="colores">
-          <img class="card-illustration" src="img/interfaz/tarjetas/colores.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/colores.webp" alt="" decoding="async">
           <span>Colores</span><small>Un mundo de color</small>
         </button>
         <button class="menu-card menu-card--shapes" data-section="formas">
-          <img class="card-illustration" src="img/interfaz/tarjetas/formas.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/formas.webp" alt="" decoding="async">
           <span>Formas</span><small>Descubre sus figuras</small>
         </button>
         <button class="menu-card menu-card--numbers" data-section="numeros">
-          <img class="card-illustration" src="img/interfaz/tarjetas/numeros.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/numeros.webp" alt="" decoding="async">
           <span>Números</span><small>Cuenta del cero al nueve</small>
         </button>
         <button class="menu-card menu-card--vowels" data-section="vocales">
-          <img class="card-illustration" src="img/interfaz/tarjetas/vocales.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/vocales.webp" alt="" decoding="async">
           <span>Vocales</span><small>Escucha y descubre sus sonidos</small>
         </button>        <button class="menu-card menu-card--songs" data-section="canciones">
-          <img class="card-illustration" src="img/interfaz/tarjetas/canciones.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/canciones.webp" alt="" decoding="async">
           <span>Canciones</span><small>Canta y baila</small>
         </button>
         <button class="menu-card menu-card--stories" data-section="cuentos">
-          <img class="card-illustration" src="img/interfaz/tarjetas/cuentos.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/cuentos.webp" alt="" decoding="async">
           <span>Cuentos</span><small>Historias para imaginar</small>
         </button>
         <button class="menu-card menu-card--find" data-section="juego">
-          <img class="card-illustration" src="img/interfaz/tarjetas/juego.png" alt="">
+          <img class="card-illustration" src="img/interfaz/tarjetas/juego.webp" alt="" decoding="async">
           <span>¿Dónde está?</span><small>Escucha, busca y toca</small>
         </button>
         <button class="menu-card menu-card--dress" data-section="armario">
-          <img class="card-illustration card-illustration--dress" src="img/personajes/armario/arcoiris.png" alt="">
+          <img class="card-illustration card-illustration--dress" src="img/personajes/armario/thumbs/arcoiris.webp" alt="" decoding="async">
           <span>Mi armario</span><small>¡Elige un look!</small>
         </button>
         <button class="menu-card menu-card--coloring" data-section="colorear">
-          <img class="card-illustration" src="img/colorear/leon.png" alt="">
+          <img class="card-illustration" src="img/colorear/leon-portada.webp" alt="" decoding="async">
           <span>Colorear</span><small>Pinta con tus colores</small>
         </button>
       </nav>
@@ -140,18 +140,18 @@
         <img id="wardrobe-avatar" src="img/personajes/niña.png" alt="La niña lleva su look original" style="position:absolute;inset:8px;width:calc(100% - 16px)!important;height:calc(100% - 16px)!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:center bottom!important">
       </div>
       <div class="outfit-list" aria-label="Elige la ropa">
-        <button class="outfit-option is-selected" data-outfit="original" aria-label="Look original"><img src="img/personajes/niña.png" alt=""><span>🏠</span></button>
-        <button class="outfit-option" data-outfit="jardinera" aria-label="Jardinera"><img src="img/personajes/armario/jardinera.png" alt=""><span>🌈</span></button>
-        <button class="outfit-option" data-outfit="lluvia" aria-label="Ropa de lluvia"><img src="img/personajes/armario/lluvia.png" alt=""><span>🌧️</span></button>
-        <button class="outfit-option" data-outfit="pijama" aria-label="Pijama de estrellas"><img src="img/personajes/armario/pijama.png" alt=""><span>🌙</span></button>
-        <button class="outfit-option" data-outfit="arcoiris" aria-label="Vestido arcoíris"><img src="img/personajes/armario/arcoiris.png" alt=""><span>⭐</span></button>
-        <button class="outfit-option" data-outfit="astronauta" aria-label="Traje de astronauta"><img src="img/personajes/armario/astronauta.png" alt=""><span>🚀</span></button>
-        <button class="outfit-option" data-outfit="abejita" aria-label="Disfraz de abejita"><img src="img/personajes/armario/abejita.png" alt=""><span>🐝</span></button>
-        <button class="outfit-option" data-outfit="invierno" aria-label="Ropa de invierno"><img src="img/personajes/armario/invierno.png" alt=""><span>❄️</span></button>
-        <button class="outfit-option" data-outfit="blanco" aria-label="Conjunto blanco"><img src="img/personajes/armario/blanco.png" alt=""><span>🤍</span></button>
-        <button class="outfit-option" data-outfit="azul-lazo" aria-label="Vestido azul con lazo"><img src="img/personajes/armario/azul-lazo.png" alt=""><span>🎀</span></button>
-        <button class="outfit-option" data-outfit="ceremonia" aria-label="Vestido verde agua"><img src="img/personajes/armario/ceremonia.png" alt=""><span>🌿</span></button>
-        <button class="outfit-option" data-outfit="coral" aria-label="Conjunto salmón"><img src="img/personajes/armario/coral.png" alt=""><span>☀️</span></button>
+        <button class="outfit-option is-selected" data-outfit="original" aria-label="Look original"><img src="img/personajes/niña-home.webp" alt="" loading="lazy"><span>🏠</span></button>
+        <button class="outfit-option" data-outfit="jardinera" aria-label="Jardinera"><img src="img/personajes/armario/thumbs/jardinera.webp" alt="" loading="lazy"><span>🌈</span></button>
+        <button class="outfit-option" data-outfit="lluvia" aria-label="Ropa de lluvia"><img src="img/personajes/armario/thumbs/lluvia.webp" alt="" loading="lazy"><span>🌧️</span></button>
+        <button class="outfit-option" data-outfit="pijama" aria-label="Pijama de estrellas"><img src="img/personajes/armario/thumbs/pijama.webp" alt="" loading="lazy"><span>🌙</span></button>
+        <button class="outfit-option" data-outfit="arcoiris" aria-label="Vestido arcoíris"><img src="img/personajes/armario/thumbs/arcoiris.webp" alt="" loading="lazy"><span>⭐</span></button>
+        <button class="outfit-option" data-outfit="astronauta" aria-label="Traje de astronauta"><img src="img/personajes/armario/thumbs/astronauta.webp" alt="" loading="lazy"><span>🚀</span></button>
+        <button class="outfit-option" data-outfit="abejita" aria-label="Disfraz de abejita"><img src="img/personajes/armario/thumbs/abejita.webp" alt="" loading="lazy"><span>🐝</span></button>
+        <button class="outfit-option" data-outfit="invierno" aria-label="Ropa de invierno"><img src="img/personajes/armario/thumbs/invierno.webp" alt="" loading="lazy"><span>❄️</span></button>
+        <button class="outfit-option" data-outfit="blanco" aria-label="Conjunto blanco"><img src="img/personajes/armario/thumbs/blanco.webp" alt="" loading="lazy"><span>🤍</span></button>
+        <button class="outfit-option" data-outfit="azul-lazo" aria-label="Vestido azul con lazo"><img src="img/personajes/armario/thumbs/azul-lazo.webp" alt="" loading="lazy"><span>🎀</span></button>
+        <button class="outfit-option" data-outfit="ceremonia" aria-label="Vestido verde agua"><img src="img/personajes/armario/thumbs/ceremonia.webp" alt="" loading="lazy"><span>🌿</span></button>
+        <button class="outfit-option" data-outfit="coral" aria-label="Conjunto salmón"><img src="img/personajes/armario/thumbs/coral.webp" alt="" loading="lazy"><span>☀️</span></button>
       </div>
       <p id="wardrobe-feedback" class="wardrobe-feedback" aria-live="polite"></p>
       <button id="wardrobe-dance" class="wardrobe-dance" aria-label="Haz bailar a la niña">🎵 <span>¡A bailar!</span></button>
