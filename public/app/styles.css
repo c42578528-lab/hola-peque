@@ -111,4 +111,3 @@ body{background-image:url("img/interfaz/fondo.webp")}
 @media(min-width:801px){.activity-card--coloring #coloring-canvas{width:auto;height:calc(100dvh - 160px);max-width:100%;max-height:calc(100% - 12px)}}
 
 /* Recorte limpio para equipaciones generadas sobre la silueta original. */
-.kit-image{-webkit-mask:url("img/personajes/armario/display/original.webp") center/contain no-repeat;mask:url("img/personajes/armario/display/original.webp") center/contain no-repeat}
