@@ -114,5 +114,5 @@ body{background-image:url("img/interfaz/fondo.webp")}
 
 /* Todos los animales deben permanecer completos dentro de su escenario. */
 #pantalla-animales .visual-stage{overflow:hidden;padding:18px}
-#pantalla-animales .visual-stage .animal{display:block;width:auto;height:auto;max-width:82%;max-height:82%;object-fit:contain;object-position:center;transform:none}
-@media(max-width:560px){#pantalla-animales .visual-stage{padding:14px}#pantalla-animales .visual-stage .animal{max-width:78%;max-height:78%}}
+#pantalla-animales .visual-stage .animal{display:block;width:82%;height:82%;max-width:none;max-height:none;object-fit:contain;object-position:center;transform:none}
+@media(max-width:560px){#pantalla-animales .visual-stage{padding:14px}#pantalla-animales .visual-stage .animal{width:78%;height:78%}}
