@@ -115,5 +115,5 @@ body{background-image:url("img/interfaz/fondo.webp")}
 /* Todos los animales deben permanecer completos dentro de su escenario. */
 #pantalla-animales .visual-stage{overflow:hidden;padding:18px}
 #pantalla-animales .visual-stage .animal{display:block;width:82%;height:82%;max-width:none;max-height:none;object-fit:contain;object-position:center;transform:none}
-#pantalla-animales .animal[src$="/perro.png"],#pantalla-animales .animal[src$="/gato.png"],#pantalla-animales .animal[src$="/jirafa.png"]{transform:translateY(-8%)}
+#pantalla-animales .animal[src$="/perro.webp"],#pantalla-animales .animal[src$="/gato.webp"],#pantalla-animales .animal[src$="/jirafa.webp"]{transform:translateY(-8%)}
 @media(max-width:560px){#pantalla-animales .visual-stage{padding:14px}#pantalla-animales .visual-stage .animal{width:78%;height:78%}}
