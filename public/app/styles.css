@@ -111,3 +111,8 @@ body{background-image:url("img/interfaz/fondo.webp")}
 @media(min-width:801px){.activity-card--coloring #coloring-canvas{width:auto;height:calc(100dvh - 160px);max-width:100%;max-height:calc(100% - 12px)}}
 
 /* Recorte limpio para equipaciones generadas sobre la silueta original. */
+
+/* Todos los animales deben permanecer completos dentro de su escenario. */
+#pantalla-animales .visual-stage{overflow:hidden;padding:18px}
+#pantalla-animales .visual-stage .animal{display:block;width:auto;height:auto;max-width:82%;max-height:82%;object-fit:contain;object-position:center;transform:none}
+@media(max-width:560px){#pantalla-animales .visual-stage{padding:14px}#pantalla-animales .visual-stage .animal{max-width:78%;max-height:78%}}
