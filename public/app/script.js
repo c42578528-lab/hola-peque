@@ -2,6 +2,7 @@ const D={animales:[["León","leon"],["Elefante","elefante"],["Perro","perro"],["
 D.animales.push(["Vaca","vaca"],["Cerdito","cerdito"],["Oveja","oveja"],["Mono","mono"],["Patito","patito"],["Rana","rana"]);
 D.animales.push(["Zorro","zorro"],["Pingüino","pinguino"],["Hipopótamo","hipopotamo"]);
 D.animales.push(["Búho","buho"],["Delfín","delfin"],["Canguro","canguro"],["Oso","oso"]);
+D.animales.push(["Ardilla","ardilla"],["Pulpo","pulpo"],["Cocodrilo","cocodrilo"],["Gallina","gallina"]);
 const animalCache=new Map();
 function preloadAnimal(index){const[,file]=D.animales[(index+D.animales.length)%D.animales.length];if(animalCache.has(file))return;const image=new Image();image.decoding="async";image.src=`img/animales/${file}.webp`;const sound=new Audio(`sonidos/voz/contenidos/animales/${file}.mp3?v=5`);sound.preload="auto";animalCache.set(file,{image,sound})}
 function warmAnimalCache(){D.animales.forEach((_,index)=>setTimeout(()=>preloadAnimal(index),index*45))}
